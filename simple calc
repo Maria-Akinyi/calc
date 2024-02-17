@@ -1,14 +1,15 @@
 #include <stdio.h>
 int main()
-//define your variables
 {
-    float firstNumber,lastNumber,result;
-    float calcSum(float firstNumber, float lastNumber)
-    {
-        scanf("Enter your first number", firstNumber);
-        scanf("Enter your last number", lastNumber);
-        result=firstNumber+lastNumber;
-        return result;
+    float x,y;
+    float calC;
+    float add(float x,float y);
+    printf("Enter 2 numbers: ");
+    scanf("%f %f",&x, &y);
+    calC=add(x,y);
+    return x+y;
+    printf("The sum is", calC);
     }
-    printf("The sum is", calcSum);
-}
+    float add(float x,float y){
+        return x+y;
+        }
