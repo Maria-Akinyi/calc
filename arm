@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int num, origi, remain, n = 0;
+    float result = 0.0;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    origi = num;
+    // Calculate the number of digits in the input
+    while (origi != 0) {
+        origi /= 10;
+        ++n;
+    }
+
+    origi = num;
+    // Compute the sum of the power of individual digits
+    while (origi != 0) {
+        remain = origi % 10;
+        result += pow(remain, n);
+        origi /= 10;
+    }
+
+    // Check if the result matches the input number
+    if ((int)result == num)
+        printf("%d is an Armstrong number.", num);
+    else
+        printf("%d is not an Armstrong number.", num);
+
+    return 0;
+}
